@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!-- A grey horizontal navbar that becomes vertical on small screens -->
+<nav class="navbar navbar-expand-sm bg-light">
+
+  <div class="container-fluid">
+    <!-- Links -->
+    <ul class="navbar-nav">
+      {%for x in Category%}
+      <li class="nav-item">
+        <a class="nav-link" href="#">{{x["name"]}}</a>
+      </li>
+      {%endfor%}
+    </ul>
+  </div>
+  {%for x in Products %}
+    <div class="card" style="width:400px">
+<!--  <img class="card-img-top" src= {{x["image"]}}  alt="Card image">-->
+  <div class="card-body">
+    <h4 class="card-title">{{x["name"]}}</h4>
+    <p class="card-text">{{x["price"]}}</p>
+    <a href="#" class="btn btn-primary">dat hang</a>
+  </div>
+      {%endfor%}
+    </div>
+</nav>
+</body>
+</html>
